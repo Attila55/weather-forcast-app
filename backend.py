@@ -10,12 +10,14 @@ def get_data(place, forcast_days=None, kind=None):
     filtered_data = data["list"]
     nr_values = 8 * forcast_days
     filtered_data = filtered_data[:nr_values]
+    # It will use in main.py here is the data extraction only
+    """
     if kind == "Temperature":
         filtered_data = [dict["main"]["temp"] for dict in filtered_data]
 
     if kind == "Sky":
         filtered_data = [dict["weather"][0]["main"] for dict in filtered_data]
-
+    """
     return filtered_data
 
 
