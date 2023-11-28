@@ -26,7 +26,7 @@ try:
         filtered_data = get_data(place, days)
 
         if option == "Temperature":
-            temperature = [dicti["main"]["temp"]/10 for dicti in filtered_data]
+            temperature = [dicti["main"]["temp"] / 10 for dicti in filtered_data]
             dates = [dicti["dt_txt"] for dicti in filtered_data]
             # Create a temperature plut
             figure = px.line(x=dates, y=temperature,
